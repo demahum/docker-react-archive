@@ -5,8 +5,9 @@ services:
 #before_install:
 #  - docker build -t demahum/docker-react -f Dockerfile.dev .
 
-#script:
+script:
 #  - docker run demahum/docker-react npm run test -- --coverage
+  - docker --version
 
 deploy:
   provider: elasticbeanstalk
