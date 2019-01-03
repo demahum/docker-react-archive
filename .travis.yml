@@ -2,12 +2,11 @@ sudo: required
 services:
   - docker
 
-#before_install:
-#  - docker build -t demahum/docker-react -f Dockerfile.dev .
+before_install:
+  - docker build -t demahum/docker-react -f Dockerfile.dev .
 
 script:
-#  - docker run demahum/docker-react npm run test -- --coverage
-  - docker --version
+  - docker run demahum/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
